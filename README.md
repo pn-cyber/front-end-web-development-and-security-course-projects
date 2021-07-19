@@ -1,4 +1,4 @@
-# The Tech Academy - Front-end Web Development & Security Projects
+# The Tech Academy | Front-end Web Development & Security Projects
 
 >"*People who are crazy enough to think they can change the world, are the ones who do.*"  ~ Rob Siltanen
 
