@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>JavaScript Function</title>
+        <title>JavaScript Functions</title>
         <meta charset="utf-8">
+    </head>
+    
+    <body style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+        <header>  
         <nav>
         </nav>
-    </head>
-    <body>
+        </header>
+
         <h1>JavaScript Functions</h1>
 
         <h3>Function 1</h3>
+        <p>Displays an alert box that welcomes and asks to continue.</p>
          <script>
-             alert('Hello, World!');
+             window.alert("Hello! Click OK to continue!");
          </script>
 
         <h3>Function 2</h3>
@@ -21,10 +26,341 @@
     	</button>
 
 	    <p id="Irish"></p>
+        <script src="./js/irish.js"></script>
+        <br>
+        <script>
+            document.write("<h3>A Demonstration - Accessing an IMG Element Location</h3>");
+        </script>
+<br>
+<br>
+<img id="myPals" src="./images/my-pals.jpg" alt="My Pals" style="height: 35%; width: 35%;">
 
-<script src="./js/irish.js"></script>
-    </body>
-    <footer>
-        <p>Footer Info</p>
-    </footer>
+<p>Click the button to get the URL of the image.</p>
+
+<button onclick="myImageFunction()">Try it</button>
+
+<p id="url"></p>
+<script src="./js/buddies.js"></script>
+<p>_______________________________________________________________</p>
+
+<h3>Fun with Variables, Strings and Writing to the Document</h3>
+<code>
+    var x = "Love that pic of my pals!"; // includes paragraph tags<br>
+    document.write(x);
+</code>
+<p>Outputs:</p>
+<script>
+    var x = "<p>Love that pic of my pals!</p>";
+    document.write(x);
+</script>
+<p>_______________________________________________________________</p>
+
+<h3>Escaping Characters &amp; Concatenating</h3>
+<script>
+    document.write("Sally said, \“I don\’t want to go!<br>She continued, \"but I will either today\\tomorrow.\”" + " Then John said, \"OK\"" + " and Wilma said, \"Well, I'm cool with either day.\"");
+</script>
+
+
+<p>The following code:</p>
+<code>
+    sentence = "I am learning";<br>
+    sentence += " a lot from this course!";<br>
+    document.getElementById("concatenate").innerHTML = sentence;<br>
+</code>
+<p>Produces this:</p>
+<p id="concatenate"></p>
+<script>
+    sentence = "I am learning";
+    sentence += " a lot from this course!";
+    document.getElementById("concatenate").innerHTML = sentence;
+</script>
+<p>_______________________________________________________________</p>
+
+<h3>Multiple Variables &amp; Adding Color</h3>
+
+<script>
+    // Multiple variables 
+    var family = "<p>- The Flintstones</p>", barney = "<p>- Mr. Rubble</p>", dino = "<p>- Dino, is a stoneage dog, but really a dinosaur.</p>";
+    
+    // string.fontcolor("");
+    var family = family.fontcolor("blue");
+    var barney = barney.fontcolor("red");
+    var dino = dino.fontcolor("Purple");
+    document.write(family);
+    document.write(barney);
+    document.write(dino);
+</script>
+<p>_______________________________________________________________</p>
+
+<h3>Fun with Math</h3>
+<script>
+    //Expressions and statements
+    document.write("a = 2<br>")
+    document.write("b = 4<br>")
+    document.write("x = 8<br>")
+    document.write("y = 16<br><br>")
+    document.write("((a + b) * x) / y = ");
+    document.write(((2 + 4) * 8) / 16);
+</script>
+
+<!-- 
+*******************************************
+    
+         Pp 43 - Math with Javascript
+
+*******************************************
+-->
+<p>_______________________________________________________________</p>
+
+<h3>More Math with Javascript (checkout the source sode and linked lessons.js file)</h3>
+
+<p id="math-addition"></p>
+<p id="math-subtraction"></p>
+<p id="math-multiplication"></p>
+<p id="math-division"></p>
+<p id="multiple-arithmetic-operators"></p>
+<p id="math-modulous-operation"></p>
+<script src="./js/lessons.js"></script>
+
+<!--
+************************************************************* 
+    
+         Pp 50 - Unary & Binary Operators with Javascript
+
+*************************************************************
+-->
+<p>_______________________________________________________________</p>
+
+<h3>Unary &amp; Binary Operators</h3>
+<p>This code:</p>
+<code>
+    var x = 10
+</code>
+<br>
+<code>
+    document.getElementById("negation").innerHTML = -x
+</code>
+<p>Returns this result:</p>
+<p id="negation"></p>
+<script>
+    var x = 10
+    document.getElementById("negation").innerHTML = -x
+</script>
+
+<!-- 
+************************************************************* 
+    
+          Pp 51 - Increment Operators with Javascript
+
+*************************************************************
+-->
+
+<p>This code:</p>
+<code>
+    var x = 5
+</code>
+<br>
+<code>
+    x++;
+</code>
+<br>
+<code>
+    document.write(x);
+</code>
+<p>Returns this result:</p>
+
+<script>
+    var x = 5
+    x++;
+    document.write(x);
+</script>
+
+<p>This code:</p>
+
+<code>
+    var x = 5.25<br>
+    for (let i = 0; i &lt; 4; i++) {<br>
+    x--;<br>
+    document.write(x);<br>
+    document.write("br tag here");
+</code><br>
+<p>Returns this result:</p>
+
+<script>
+    var x = 5.25
+    for (let i = 0; i < 4; i++) {
+    x--;
+    document.write(x);
+    document.write("<br>");
+    }
+</script>
+
+<!--
+************************************************************ 
+    
+                      Pp 52 - Math.random()
+
+
+<script>
+window.alert(Math.random());
+</script>
+
+<script>
+    window.alert(Math.random() * 100);
+</script>
+
+************************************************************
+-->
+<p>_______________________________________________________________</p>
+
+<h3>Some Random Numbers</h3>
+<p>Random: 0 - 1</p>
+<code>document.write(Math.random());</code>
+<p>Result:</p>
+<script>
+    document.write(Math.random());
+</script>
+<p>Random: 0 - 100</p>
+<code>document.write(Math.random() * 100);</code>
+<p>Result:</p>
+<script>
+     document.write(Math.random() * 100);
+</script>
+<!--
+ *********************************************************** 
+    
+                PP 56 - Javascript Dictionary
+
+************************************************************
+-->
+<p>_______________________________________________________________</p>
+
+<h3>Key Values &amp; Dictionary (checkout the source sode and linked lessons.js file)</h3>
+<span id ="displayAttributeHeading1"></span><span id="displayAnimalAttribute1"></span><br>
+<span id ="displayAttributeHeading2"></span><span id="displayAnimalAttribute2"></span><br>
+<span id ="displayAttributeHeading3"></span><span id="displayAnimalAttribute3"></span><br>
+<span id ="displayAttributeHeading4"></span><span id="displayAnimalAttribute4"></span><br>
+<span id ="displayAttributeHeading5"></span><span id="displayAnimalAttribute5"></span><br>
+<span id ="displayAttributeHeading6"></span><span id="displayAnimalAttribute6"></span><br>
+<span id ="displayAttributeHeading7"></span><span id="displayAnimalAttribute7"></span><br>
+<script src="./js/lessons.js"></script>
+
+<!--
+************************************************************* 
+    
+                    PP 59 - Type of Operator
+
+*************************************************************
+-->
+<p>_______________________________________________________________</p>
+
+<h3>Displays the type of string it is:</h3>
+<code>
+        document.write(typeof "This is a string");
+    <br><br>
+        document.write(typeof 12345678);
+</code>
+<br><br>
+Result:
+<br><br>
+<script>
+    document.write(typeof "This is a string");
+</script>
+<br><br>
+<script>
+    document.write(typeof 12345678);
+</script>
+
+<!--
+*************************************************************
+
+          Floating Point & Other Numbers (see notes)
+          
+*************************************************************
+-->
+<p>_______________________________________________________________</p>
+
+<h3>Floating Point &amp; Other Numbers</h3>
+<p><br>This will result in an output of "NaN" (Not a Number), because you can’t divide 0 by 0:</p>
+<code>
+    document.getElementById("not-a-number").innerHTML = 0/0
+</code>
+<p>Result:</p>
+<p id="not-a-number"></p>
+<script>
+    document.getElementById("not-a-number").innerHTML = 0/0
+</script>
+
+<p>_______________________________________________________________</p>
+
+<p><br>Using the isNaN() function to determine if a number or not (true/false):</p>
+<code>
+    document.getElementById("not-a-number-2").innerHTML = isNaN ("Is this sentence not a Number?")
+</code>
+<br><br>
+<code>
+    document.getElementById("not-a-number-2").innerHTML = isNaN ("100")
+</code>
+<p>Result:</p>
+<p id="not-a-number-2"></p>
+<script>
+    document.getElementById("not-a-number-2").innerHTML = isNaN ("Is this sentence not a Number?")
+</script>
+<p>Result:</p>
+<p id="not-a-number-3"></p>
+<script>
+    document.getElementById("not-a-number-3").innerHTML = isNaN ("100")
+</script>
+
+<p>_______________________________________________________________</p>
+
+<p><br>The result "Infinity" because the number entered is larger than 1.797693134862315E+308:</p>
+<code>
+    document.getElementById("infinity").innerHTML = 1.797693134862315E+309;
+</code>
+<p>Result:</p>
+<p id="infinity"></p>
+<script>
+    document.getElementById("infinity").innerHTML = 1.797693134862315E+309;
+</script>
+
+<p>_______________________________________________________________</p>
+
+<p><br>The result "-Infinity" because the number entered is larger than -1.797693134862315E+308:</p>
+<code>
+    document.getElementById(negInfinity").innerHTML = -1.797693134862315E+309;
+</code>
+<p>Result:</p>
+<p id="negInfinity"></p>
+<script>
+    document.getElementById("negInfinity").innerHTML = -1.797693134862315E+309;
+</script>
+
+<!--
+*************************************************************
+
+                          Booleans
+          
+*************************************************************
+-->
+<p>_______________________________________________________________</p>
+
+<h3>True &amp; False</h3>
+<code>document.write(10 > 5);</code>
+
+<p>Outputs:</p>
+<script>
+    document.write(10 > 5);
+</script>
+
+<br><br>
+
+<code>document.write(10 &lt; 5);</code>
+
+<p>Outputs:</p>
+<script>
+    document.write(10 < 5);
+</script>
+
+</body>
 </html>
